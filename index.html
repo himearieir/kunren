@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charest="UTF-8">
+        <title>姫蟻エイル　ヒメアリの女王アリVtuber</title>
+        <meta name="description" content="ヒメアリの女王アリVtuber">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&family=Ms+Madi&display=swap"
+          rel="stylesheet"
+        />
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="icon" type="image/png" href="images/6.png">
+
+        <style>
+            .btn-menu {
+              position: absolute;
+              top: 12px;
+              right: 12px;
+              border: 1px solid rgba(255, 255, 255, 0.5);
+              color: rgb(7, 7, 7);
+              padding: 0.5rem 1rem;
+            }
+      
+            .main-nav {
+              width: 0;
+              position: absolute;
+              top: 25px;
+              right: 0;
+              overflow: hidden;
+              transition: 0.5s;
+              display: block;
+            }
+            .main-nav li {
+              text-align: center;
+              margin: 1.5rem 0;
+            }
+            .main-nav a {
+              display: block;
+            }
+            .main-nav.open-menu {
+              width: 200px;
+            }
+          </style>
+    </head>
+
+
+    <body>
+        <div id="home" class="big-bg">
+            <header class="page-header wrapper">
+                <h1><a href="index.html"><img class="logo" src="images/himeari.svg" alt="姫蟻エイルホーム"></a></h1>
+                <nav>
+                    <button class="btn-menu">Menu</button>
+                    <ul class="main-nav">
+                      <li><a href="news.html">News</a></li>
+                      <li><a href="menu.html">Art</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="home-content wrapper">
+                <h2 class="page-title">Queen Ants here.</h2>
+                <p>ヒメアリの女王アリVtuber</p>
+                <a class="button" href="news.html">活動報告</a>
+            </div><!-- /.home-content -->
+        </div><!-- /#home -->
+    </body>
+    <script>
+        const btn = document.querySelector(".btn-menu");
+        const nav = document.querySelector(".main-nav");
+    
+        btn.addEventListener("click", () => {
+          nav.classList.toggle("open-menu");
+          if (btn.innerHTML === "Menu") {
+            btn.innerHTML = "Close";
+          } else {
+            btn.innerHTML = "Menu";
+          }
+        });
+      </script>
+</html>
